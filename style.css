@@ -10,7 +10,7 @@
 body{
     height: 100vh;
     display: flex;
-    background-color: brown;
+    background-image: linear-gradient(120deg, #3a3833 0%, #9239e6 100%);
 }
 .memory-game{
     width: 65vh;
@@ -47,7 +47,7 @@ body{
     padding: 20px;
     position: absolute;
     border-radius: 5px;
-    background: cyan;
+    background:#3E393B;
     backface-visibility: hidden;
 }
 .front-face{
@@ -56,7 +56,7 @@ body{
 .game-tag{
     display: flex;
     justify-content: center;
-    color: cyan;
+    color: #D6BA31;
     font-weight: 1000;
     font-size: 2rem;
 
@@ -64,9 +64,24 @@ body{
 button{
     position: absolute;
     margin-top: 2rem;
+    border-radius: 1rem;
     top: 7vh;
     height: 5vh;
     width: 10vh;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.2vw;
+    background-color: rgba(51, 51, 51, 0.5);
+    
+}
+button:hover{
+    color: #000;
+    background-color: #D6BA31;
+    transition: all 0.2s;
+
 }
 @media screen and (max-width: 768px) {
     
