@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.mother-container{
+    margin: 0 auto;
+    
+}
+body{
+    height: 100vh;
+    display: flex;
+    background-color: brown;
+}
+.memory-game{
+    width: 65vh;
+    height: 65vh;
+    margin: auto;
+    margin-top: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+.memory-card{
+    width:calc(25% - 10px) ;
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    transform: scale(1);
+    transform-style: preserve-3d ;
+    transition: transform 2s;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+    
+}
+.memory-card:active{
+    cursor: pointer;
+    transition: transform 0.5s  ease-in-out;
+    
+}
+.memory-card.flip{
+    
+    transform: rotateY(180deg);
+    transition: transform 1s cubic-bezier(1, 0, 0, 1);
+}
+.front-face, .back-face{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: cyan;
+    backface-visibility: hidden;
+}
+.front-face{
+    transform: rotateY(180deg);
+}
+.game-tag{
+    display: flex;
+    justify-content: center;
+    color: cyan;
+    font-weight: 1000;
+    font-size: 2rem;
+
+}
+button{
+    position: absolute;
+    margin-top: 2rem;
+    top: 7vh;
+    height: 5vh;
+    width: 10vh;
+}
+@media screen and (max-width: 768px) {
+    
+    .memory-game{
+        width: 40vh;
+        height: 40vh;
+    }
+    .memory-card{
+    width:calc(25% - 20px) ;
+    height: calc(33.333% - 20px);
+    }
+    .game-tag{
+    font-weight: 1000;
+    font-size: 1rem;
+    }
+    button{
+    margin-top: 1rem;
+    top: 3vh;
+    height: 3vh;
+    width: 10vh;
+}
+
+}
